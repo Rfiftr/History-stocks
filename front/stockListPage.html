@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .prev-page-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .title {
+            text-align: center;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .search-input {
+            padding: 8px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-right: 5px;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: blue;
+        }
+        .stocks-list-container {
+            position: relative;
+            width: 80%;
+            margin: auto;
+        }
+        .stocks-followed {
+            margin-top: 20px;
+        }
+        .stock-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .stock-item .remove-btn {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="stocks-list-container">
+        <div class="prev-page-btn">&gt;</div>
+        <h1 class="title">Stocks list</h1>
+        <div class="search-container">
+            <input class="search-input" type="text" placeholder="Search stock">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="stocks-followed">
+            <!-- Sample stock item -->
+            <div class="stock-item">
+                <span>Stock Name</span>
+                <span class="remove-btn">x</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functionality here
+        // Assuming there's a list of tracked stocks
+        const trackedStocks = ['AAPL', 'GOOGL', 'MSFT'];
+
+        // Function to render tracked stocks
+        function renderTrackedStocks() {
+            const stocksFollowed = document.querySelector('.stocks-followed');
+            stocksFollowed.innerHTML = '';
+            trackedStocks.forEach(stock => {
+                const stockItem = document.createElement('div');
+                stockItem.classList.add('stock-item');
+                stockItem.innerHTML = `
+                    <span>${stock}</span>
+                    <span class="remove-btn">x</span>
+                `;
+                stocksFollowed.appendChild(stockItem);
+            });
+        }
+
+        // Render tracked stocks when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            renderTrackedStocks();
+        });
+
+        // Functionality to remove a stock
+        document.querySelector('.stocks-followed').addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-btn')) {
+                const stockName = event.target.previousElementSibling.textContent;
+                const index = trackedStocks.indexOf(stockName);
+                if (index !== -1) {
+                    trackedStocks.splice(index, 1);
+                    renderTrackedStocks();
+                }
+            }
+        });
+
+        // Functionality to go back to previous page (for demo purpose)
+        document.querySelector('.prev-page-btn').addEventListener('click', () => {
+            history.back();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Navbar styles */
+.nav {
+  display: flex;
+  padding: 10px 0px 0px 20px;
+  background-color: #e1e1e1;
+}
+
+.link-calculator-page, .link-stock-list {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.link-calculator-page:hover, .link-stock-list:hover {
+  text-decoration: underline;
+}
+
+/* Calendar styles */
+.calendar {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.select-year, .select-month {
+  margin: 3px;
+  padding: 8px;
+  border: none;
+  background-color: #dbdbdb;
+}
+
+.next-btn-year, .prev-btn-year, .next-btn-month, .prev-btn-month {
+  background-color: #714ee2;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+  transition: background-color 0.3s;
+}
+
+.prev-btn-year, .prev-btn-month {
+  border-radius: 10px 0px 0px 10px;
+}
+
+.next-btn-year {
+  margin-right: 25px;
+}
+
+.next-btn-year:hover, .prev-btn-year:hover, .next-btn-month:hover, .prev-btn-month:hover {
+  background-color: #592dba;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.day, .day-empty {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+}
+
+.day {
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: #e0dede;
+  color: #333;
+}
+
+.current-month {
+  color: #fff;
+  background-color: #42c05b;
+}
+
+/* Daily stocks data styles */
+.stock-details {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-stock-details.stock-details {
+  margin-bottom: 15px;
+}
+
+.header-stock-details {
+  text-align: center;
+  background-color: #714ee2;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  color: #ccc;
+  
+}
+
+.daily-stocks-data {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.daily-stocks-data tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.daily-stocks-data td, .daily-stocks-data th  {
+  padding: 8px;
+  text-align: center;
+}
+
+/* Daily value change styles */
+.daily-value-change {
+  max-width: 400px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-daily-change {
+  display: flex;
+  background-color: #714ee2;
+  color: #ccc;
+  border-radius: 5px 5px 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.title, .total-value-change {
+  padding: 10px;
+  text-align: center;
+}
+
+.daily-value-change table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.daily-value-change table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.daily-value-change table td, .daily-value-change table th {
+  padding: 8px;
+  text-align: center;
+}

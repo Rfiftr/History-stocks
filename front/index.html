@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="link-calculator-page"><a href="/calculatePage">calculator</a></div>
+        <div class="link-stock-list"><a href="/stockListPage">stock list</a></div>
+    </div>
+    <div class="calendar">
+        <div class="header">
+            <button class="prev-btn-year">&lt;</button>
+            <select class="select-year"></select>
+            <button class="next-btn-year">&gt;</button>
+
+            <button class="prev-btn-month">&lt;</button>
+            <select class="select-month"></select>
+            <button class="next-btn-month">&gt;</button>
+        </div>
+        <div class="days"></div>
+    </div>
+    <div class="stock-details">
+        <div class="header-stock-details">26/04/2024</div>
+        <table class="daily-stocks-data">
+            <tr>
+                <th>סה"כ שווי</th>
+                <th>מחיר</th>
+                <th>מניה</th>
+            </tr>
+            <div class="stocks-data-following">
+                <tr>
+                    <td>$3611.90</td>
+                    <td>$460.15</td>
+                    <td>VOO</td>
+                </tr>
+                <tr>
+                    <td>$1002.03</td>
+                    <td>$192.26</td>
+                    <td>IWM</td>
+                </tr>
+            </div>
+        </table>
+    </div>
+    <div class="daily-value-change">
+        <div class="header-daily-change">
+            <div class="total-value-change">Total profit/loss: $13.93</div>
+        </div>
+        <table>
+            <tr>
+                <th>סה"כ שינוי</th>
+                <th>היום</th>
+                <th>אתמול</th>
+                <th>מניה</th>
+            </tr>
+            <div>
+                <tr>
+                    <td>$11.90</td>
+                    <td>$3611.90</td>
+                    <td>$460.15</td>
+                    <td>VOO</td>
+                </tr>
+                <tr>
+                    <td>$2.03</td>
+                    <td>$1002.03</td>
+                    <td>$192.26</td>
+                    <td>IWM</td>
+                </tr>
+            </div>
+
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
